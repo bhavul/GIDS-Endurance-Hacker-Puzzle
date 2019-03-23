@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get your hoodie</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <style>
+        .logo{
+            width: 15%;
+            margin-top: 2%;
+            margin-bottom:2%;
+        }
+        body{
+            text-align: center;
+        }
+
+        body ul{
+            text-align: left;
+        }
+
+        body ul li{
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!--?#here-->
+<img src="https://www.endurance.com/wp-content/themes/endurance/assets/images/endurance-header-logo.png" class="logo">
+
+<div class="alert alert-success exceeded"><strong>You did it! Show this and grab a T-shirt from the booth now!</strong></div>
+<br><br>
+<h3>Next Step?</h3>
+<br><br>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+<ul>
+    <li><strong>If you completed on your phone, or at our booth laptop</strong></li>
+    <ol>
+        <li>Take a picture of the QR code, or save the following link - <strong>http://bit.ly/EnduranceGIDS</strong></li>
+        <li>When you have your laptop, open the link above</li>
+        <li>LOG IN using the same details you had just put</li>
+        <li>Solve the puzzle to win an iPad</li>
+    </ol>
+    <br><br>
+    <li><strong>If you are already on YOUR laptop</strong></li>
+    <ol>
+        <li>Get ready to win an iPad</li>
+        <li>Go to the following link to start the first level of your puzzle - <a href="/GIDS2017/first.pt">http://103.211.218.86/GIDS2017/first.pt</a></li>
+        <li>Solve the puzzle to win an iPad</li>
+    </ol>
+</ul>
+</div>
+<div class="col-sm-3"></div>
+</div>
+<br>
+<br><br><div class="alert alert-info">Note that you will require a laptop for the remaining puzzle.</div>
+
+
+</body>
+</html>

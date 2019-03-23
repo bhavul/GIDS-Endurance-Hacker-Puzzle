@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>${status}</title>
+</head>
+<body>
+
+Hello ${name}, ${message}.
+<a href="${link}">Click here</a> to ${link_msg}
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+body{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+ }
+
+#status{
+    text-align: center;
+    background: lightgreen;
+}
+
+#footernote{
+    font-size: x-small;
+}
+
+/*#here*/
+.logo{
+    width: 20%;
+    margin-top: 2%;
+    margin-bottom:2%;
+}
+
+.centerThis{
+    text-align: center;
+}

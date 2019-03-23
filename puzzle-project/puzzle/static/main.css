@@ -1,0 +1,15 @@
+body{
+    width: 600px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+}
+
+/*#here*/
+.logo{
+    width: 40%;
+    margin-top: 2%;
+    margin-bottom:2%;
+}

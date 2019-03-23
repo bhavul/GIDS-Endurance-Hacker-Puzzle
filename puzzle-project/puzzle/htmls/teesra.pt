@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge</title>
+    <link rel="stylesheet" type="text/css" href="${request.static_url('puzzle:static/style3.css')}" />
+    <link rel="stylesheet" type="text/css" href="${request.static_url('puzzle:static/bootstrap.min.css')}" />
+</head>
+
+<body>
+
+<!--?#here-->
+<img src="https://www.endurance.com/wp-content/themes/endurance/assets/images/endurance-header-logo.png" class="logo">
+<br><br>
+
+<strong>Level 3</strong><br><br>
+<div class="row">
+
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <p>After an <strong>shift of 9</strong> hours, John likes nothing but his vanilla caesar salad. <br><br>So, you have 1 second to decrypt the random string <strong>${randomString}</strong> and submit it</p><br />
+        <form action="/teesra.pt" method="POST" class="form-inline">
+            <input type="text" name="answer" class="form-control" value="" placeholder="Decrypted String"/>
+            <input type="submit" name="submit" class="btn btn-primary" value="Submit Answer" />
+        </form>
+        <p>${errors}</p>
+    </div>
+    <div class="col-sm-3"></div>
+
+</div>
+
+</body>
+</html>

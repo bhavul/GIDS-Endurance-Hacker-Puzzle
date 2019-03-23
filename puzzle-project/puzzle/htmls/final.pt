@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final</title>
+    <link rel="stylesheet" type="text/css" href="${request.static_url('puzzle:static/style4.css')}" />
+    <link rel="stylesheet" type="text/css" href="${request.static_url('puzzle:static/bootstrap.min.css')}" />
+</head>
+<body>
+
+<!--?#here-->
+<div class="centerThis">
+    <img src="https://www.endurance.com/wp-content/themes/endurance/assets/images/endurance-header-logo.png" class="logo">
+</div>
+<br><br>
+
+
+<div class="row">
+
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+
+<strong>Level 4</strong><br><br>
+<p id="description">
+    The world is made out of numbers. They can describe the most complex thing in the world quite easily. So, John has his own love for numbers. Like people collect stamps as a hobby, John preserves a collection of numbers. Silly john. Furthermore, he plays with them by creating relations between them. I know, right?! But this is the only and the last puzzle before we get to the iPad. <br><br>
+
+    One such relation he coined is called "The heir" relation. Say, we have a set <strong>S</strong> of <strong>n</strong> unique numbers. According to john, <strong>number p</strong> (belonging to set S) is "The heir" of <strong>number q</strong> if <strong>p</strong> is a <i>prefix</i> of q, and there is NO <strong>number x</strong> (in set S) such that <strong>p</strong> is prefix of <strong>x</strong> and length(x) < length(z).<br><br>
+
+
+    <strong>For example</strong>, in <strong>S = {11, 12, 124, 1245}</strong>, the number '12' is "The heir" of '124' because '12' is a prefix of '124' and no other number of length < 3 in <strong>S</strong> shares same prefix. The numbers '124' is also "The heir" of '1245', but '12' is not 'The Heir' of '1245', because there's the number '124' whose length is less than length(1245) and has prefix '12'. <br><br>
+
+    Here are examples of some of john's definitions:
+    <ul>
+        <li><em>prefix</em> : 123 would be a prefix of 1234. But not for 1256 or 34.
+        <li><em>length</em> : length(123) = 3. length(5) = 1. length(9999) = 4.
+        <li><em>value</em> : value(345) = 3+4+5 = 12. value(1000) = 1+0+0+0 = 1.
+    <br><br></ul>
+    The final key to the treasure box of John is a number X. For finding this number X, John created a subset of numbers such that <strong>none</strong> of the numbers in the subset were "The Heir" of any other in the set S. But many such subsets can exist, so John chose the one which gave the maximum sum of values of numbers in the subset. Remember value of each number is sum of its digits. That maxiumum sum of values of that subset is value X.
+    <br><br>
+    You have to find X and submit that in output.
+    <br><br>
+    The first line contains an integer denoting n (the number of numbers in his collection). The second line contains n space-separated numbers.
+    <br><br>
+    1 <= n <= 10^5<br>
+    1 <= length(n[i]) <= 11
+    <br><br>
+    <a href="https://www.dropbox.com/s/rec324psfom6op6/in.txt?dl=0" target="_blank">Click here</a> to download the input file.<br><br>
+</p>
+
+
+<p id="footernote">Please note that only hundred wrong attempts are allowed. After that your account will get disabled and stay on this level.</p>
+
+<form action="/final.pt" id="form" method="POST">
+    <label>Output : </label><input type="text" name="answer" id="answer" class="form-control"><br><br>
+    <label> Link to your code (optional) </label><input type="text" name="code" id="code" class="form-control"><br><br>
+    <input type="submit" name="submit" value="submit" class="btn btn-primary">
+</form>
+
+<p id="status_submission" style="background:${color}">${status_of_answer_submission}</p>
+
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+</body>
+</html>

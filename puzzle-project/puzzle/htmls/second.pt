@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <title>Second</title>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<body>
+Hello,<br>
+You've been logged in as ${request.params['name']}.
+<br><br>
+<div class="alert alert-danger">${message}</div>
+
+</body>
+</html>

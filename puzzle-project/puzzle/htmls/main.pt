@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="${request.static_url('puzzle:static/main.css')}" />
+</head>
+<body>
+
+<!--?#here-->
+<img src="https://www.endurance.com/wp-content/themes/endurance/assets/images/endurance-header-logo.png" class="logo">
+
+<div id="outer">
+    <br>
+    ${optionalmsg}
+    <br><br>
+    ${structure: message}
+    <br><br>
+    <p><strong>${errors}</strong></p>
+    <br><br>
+    If you have signed up before, just enter the correct details again. That will log you in and take you to the correct puzzle level.<br><br>
+    <form action="/" method="POST" id="form">
+        <span><label>Name </label><input type="text" name="name" value=""></span>
+        <br><br>
+        <span><label>E-mail </label><input type="email" name="email" value=""></span>
+        <br><br>
+        <span><label>Contact </label><input type="number" name="contact" value=""></span>
+        <br><br>
+        <input type='submit' value='Submit' />
+    </form>
+</div>
+
+
+</body>
+</html>

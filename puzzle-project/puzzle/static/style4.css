@@ -1,0 +1,29 @@
+body{
+    position: relative;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#form{
+    text-align:center;
+}
+
+#status_submission{
+    text-align: center;
+}
+
+/*#here*/
+#footernote{
+    font-size: small;
+}
+
+/*#here*/
+.logo{
+    width: 20%;
+    margin-top: 2%;
+    margin-bottom:2%;
+}
+
+.centerThis{
+    text-align: center;
+}

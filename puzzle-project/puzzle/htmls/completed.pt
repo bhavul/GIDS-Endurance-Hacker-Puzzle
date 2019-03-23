@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="${request.static_url('puzzle:static/style5.css')}" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <title>Completed</title>
+</head>
+<body>
+
+<div class="centerThis">
+    <img src="https://www.endurance.com/wp-content/themes/endurance/assets/images/endurance-header-logo.png" class="logo">
+</div>
+
+
+<div class="row centerThis">
+    <div class="alert alert-success">You have successfully completed the puzzle. Congratulations!</div>
+</div>
+<br><br>
+
+<div class="row">
+
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        We will run a lucky draw among all who clear all levels. If you are the chosen winner, we will contact you.<br><br>
+
+        Hope you had fun while solving it. Have a good time at the conference. :)<br><br>
+
+        Btw, we have openings in our tech teams. Come and talk to us at the Endurance booth.<br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <p id="footernote">This puzzle was done by a back-end guy. Apologies for no UI. Send any constructive criticism for the puzzle, to ${email}.</p>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+</body>
+</html>

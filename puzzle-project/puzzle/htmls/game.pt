@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zero</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <style>
+        .custombutton{
+            border-radius: 2px;
+            border: 0px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            height: 45px;
+        }
+
+        .logo{
+            width: 15%;
+            margin-top: 2%;
+            margin-bottom:2%;
+        }
+
+        h1{
+            margin-bottom:2%;
+        }
+
+        ul{
+            margin-bottom: 4%;
+            margin-top: 2%;
+        }
+
+        body{
+            text-align: center;
+        }
+
+        ul{
+            width: 35%;
+            margin-left: 33%;
+        }
+
+        li{
+            text-align:left;
+        }
+
+        .exceeded{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+<img src="https://www.endurance.com/wp-content/themes/endurance/assets/images/endurance-header-logo.png" class="logo">
+<h1>Guess the number</h1>
+
+
+<p>This is a small game. There are 100 buttons below. One of them has your lucky number. Find which one has, in 8 or lesser tries.</p>
+<ul>
+    <li>A button that turns <span class="orange">orange</span> tells you the lucky number is greater than it</li>
+    <li>A button that turns <span class="red">red</span> tells you the lucky number is lesser than it</li>
+    <li>The lucky number turns green on pressing it</li>
+</ul>
+
+<div class="alert alert-info">${info}</div>
+
+<div id="wrapper">
+
+    <form action="/game.pt" method="POST" class="form-inline">
+        <input type="hidden" name="hiddenval" value="${val}" class="correctVal">
+        <input type="text" name="value" value="" class="form-control" placeholder="Lucky number">
+        <input type="submit" name="submit" value="submit" class="btn btn-default">
+    </form>
+    <br><br>
+
+
+<div class="row">
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=1>1</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=2>2</button><div class="col-sm-1"></div>
+</div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=3>3</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=4>4</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=5>5</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=6>6</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=7>7</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=8>8</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=9>9</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=10>10</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=11>11</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=12>12</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=13>13</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=14>14</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=15>15</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=16>16</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=17>17</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=18>18</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=19>19</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=20>20</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=21>21</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=22>22</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=23>23</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=24>24</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=25>25</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=26>26</button><div class="col-sm-1"></div></div>
+
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=27>27</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=28>28</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=29>29</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=30>30</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=31>31</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=32>32</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=33>33</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=34>34</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=35>35</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=36>36</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=37>37</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=38>38</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=39>39</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=40>40</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=41>41</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=42>42</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=43>43</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=44>44</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=45>45</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=46>46</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=47>47</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=48>48</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=49>49</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=50>50</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=51>51</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=52>52</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=53>53</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=54>54</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=55>55</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=56>56</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=57>57</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=58>58</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=59>59</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=60>60</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=61>61</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=62>62</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=63>63</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=64>64</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=65>65</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=66>66</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=67>67</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=68>68</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=69>69</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=70>70</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=71>71</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=72>72</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=73>73</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=74>74</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=75>75</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=76>76</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=77>77</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=78>78</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=79>79</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=80>80</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=81>81</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=82>82</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=83>83</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=84>84</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=85>85</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=86>86</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=87>87</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=88>88</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=89>89</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=90>90</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=91>91</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=92>92</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=93>93</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=94>94</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=95>95</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=96>96</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=97>97</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=98>98</button><div class="col-sm-1"></div></div>
+<div class="row"><div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=99>99</button><div class="col-sm-1"></div>
+    <div class="col-sm-1"></div><button class="btn-primary col-sm-4 custombutton" id=100>100</button><div class="col-sm-1"></div></div>
+
+
+</div>
+
+<div class="alert alert-danger exceeded">8 tries are over. Sorry, you lost. You wanna have a go at it again? Just reload the page.</div>
+
+<script>
+
+
+    $(document).ready(function(){
+        var count = 0;
+        $(".custombutton").click(function() {
+            count++;
+            if(count > 8)
+            {
+                $("#wrapper").html("");
+                $(".exceeded").css("display","block");
+            }
+            actualVal = parseInt($(".correctVal").val())
+            thisVal = parseInt($(this).text())
+            if (thisVal < actualVal)
+            {
+                $(this).removeClass("btn-primary");
+                $(this).addClass("btn-warning");
+            }
+            if (thisVal > actualVal)
+            {
+                $(this).removeClass("btn-primary");
+                $(this).addClass("btn-danger");
+            }
+            if (thisVal == actualVal)
+            {
+                $(this).removeClass("btn-primary");
+                $(this).addClass("btn-success");
+            }
+        });
+
+
+    });
+
+</script>
+
+
+</body>
+
+
+</html>

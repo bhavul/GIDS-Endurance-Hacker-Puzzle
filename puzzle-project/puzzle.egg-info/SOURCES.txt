@@ -1,0 +1,6 @@
+puzzle.egg-info/PKG-INFO
+puzzle.egg-info/SOURCES.txt
+puzzle.egg-info/dependency_links.txt
+puzzle.egg-info/entry_points.txt
+puzzle.egg-info/requires.txt
+puzzle.egg-info/top_level.txt
